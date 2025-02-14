@@ -37,34 +37,34 @@ const Sectionpage = () => (
     <Suspense fallback={<div>Loading...</div>}>
       <Row>
         <SectionComponent
-          image="/data/1.jpg"
+          image="/one.jpeg"
           heading={<><strong>Bihar’s First Live Trading Institute</strong></>}
           text="The only institute in Bihar offering real-time trading classes, setting a new standard for stock market education."
         />
         <SectionComponent
-          image="/data/1.jpg"
+          image="/two.jpeg"
           heading={<><strong>Learn and Trade Simultaneously</strong></>}
           text="Students gain hands-on experience by learning and trading in a live market environment."
         />
         <SectionComponent
-          image="/data/1.jpg"
+          image="/Three.jpg"
           heading={<><strong>Expert Mentor Guidance</strong></>}
           text="Benefit from personalized instruction and proven strategies from seasoned trading professionals."
         />
       </Row>
       <Row>
         <SectionComponent
-          image="/data/1.jpg"
+          image="/Four.jpg"
           heading={<><strong>Real-Time Market Exposure</strong></>}
           text="Develop practical trading skills with immediate application in the live market."
         />
         <SectionComponent
-          image="/data/1.jpg"
+          image="/Five.jpg"
           heading={<><strong>Comprehensive Trading Experience</strong></>}
           text="A unique blend of theoretical knowledge and practical execution, ensuring well-rounded trading expertise."
         />
         <SectionComponent
-          image="/data/1.jpg"
+          image="/six.jpg"
           heading={<><strong>Interactive Learning Environment</strong></>}
           text="Engage in an energetic and collaborative setting where real-time discussions and peer interactions enhance the learning experience."
         />

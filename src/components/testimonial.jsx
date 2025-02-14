@@ -6,45 +6,45 @@ const reviews = [
     name: "Dhiraj Kumar",
     review: "Prem sir ka experience aur energetic class environment se maine live trading mein confidence paya. Standoff strategies bahut helpful hain.",
     rating: 5,
-    image: "/data/Dhiraj.png"
+    image: "/Dhiraj.png"
   },
   {
     name: "Shahwaz Alam",
     review: "I learned so much about the stock market from Ankit Sir. His classes are clear and helpful. Highly recommended",
     rating: 4,
-    image: "/data/Sahnwaz.png"
+    image: "/Sahnwaz.png"
   },
   {
     name: "Vaibhav",
     review: "Live market mein trading ka experience anokha tha. Ankit sir, Prem sir, aur Prabhas sir ke guidance meinmaine kaafi kuch seekha.",
     rating: 5,
-    image: "/data/baibhav.png"
+    image: "/baibhav.png"
   },
   
   {
     name: "Prabhat",
     review: "Stock Archery ne mujhe trading ke basics aur advanced dono level pe mahir banaya. Bhagalpur jaise chote sheher mein aisa platform milna sach mein incredible ha",
     rating: 5,
-    image: "/data/Prabhat.png"
+    image: "/Prabhat.png"
   },
   {
     name: "Rohan Kumar",
     review: "Stock Archery ke live classes kamaal ki hain! Real-time market ke sath trading seekhne ka maza hi kuch aur hai. Professionals ke sath trade karke bahut kuch naya seekhne ko mila. Bahut helpful aur informative sessions hain. Highly recommended.",
     rating: 5,
-    image: "/data/Rohan.png"
+    image: "/Rohan.png"
   },
   
   {
     name: "Dhiraj Ghosh",
     review: "Real-time trading se confidence badta hai aur strategies ko easily implement karne ka mauka milta hai. Instructors bhi bahut supportive hain. Ideal for trading beginners and experts alike!.",
     rating: 5,
-    image: "/data/Dhiraj Ghosh.png"
+    image: "/Dhiraj Ghosh.png"
   },
   {
     name: "Abhinish Kumar",
     review: "Real-time trading se self-belief badh jaata hai aur strategies ko aasan se apply karne ka moka milta hai. Instructors bhi kaafi helpful hain. Beginners aur experts dono ke liye yeh perfect platform hai",
     rating: 5,
-    image: "/data/Abhinish.png"
+    image: "/Abhinish.png"
   }
  
 ];
