@@ -23,6 +23,7 @@ import It from './blog/it';
 import Bj from './blog/bjaj';
 import Bj2 from './blog/bjaj2';
 import Five from './blog/five';
+import Franchise from './components/Franchise';
 
 const theme = {
   colors: {
@@ -70,9 +71,11 @@ const App = () => {
           <Route path="/bjaj" element={<Bj />} />
           <Route path="/bjaj2" element={<Bj2 />} />
           <Route path="/five" element={<Five />} />
+          <Route path="/franchise" element={<Franchise />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
+        
       </BrowserRouter>
     </ThemeProvider>
   );

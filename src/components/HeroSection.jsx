@@ -16,7 +16,7 @@ const HeroSection = () => {
           </h1>
           <p className="hero-para">{paragraph}</p>
           <Link
-            to="sections-page" // The target section ID
+            to="sections-page"
             smooth={true}
             duration={500}
             aria-label="Learn more about our services"

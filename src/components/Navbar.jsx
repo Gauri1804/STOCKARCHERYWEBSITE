@@ -98,6 +98,17 @@ const Navbar = () => {
               FAQ
             </NavLink>
           </li>
+          <li role="none">
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/Franchise"
+              role="menuitem"
+              aria-label="FAQ"
+            >
+              Franchise
+            </NavLink>
+          </li>
         </ul>
       </div>
     </Nav>
