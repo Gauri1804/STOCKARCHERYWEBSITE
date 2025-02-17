@@ -8,9 +8,9 @@ const Contact = () => {
     username: "",
     phonenumber: "",
     message: "",
-    tradingExperience: "", // New field for trading experience
-    city: "", // New field for city
-    occupation: "", // New field for occupation
+    tradingExperience: "",
+    city: "",
+    occupation: "",
   });
 
   const handleSubmit = async (e) => {
@@ -21,9 +21,9 @@ const Contact = () => {
       username: form.username.value,
       phonenumber: form.phonenumber.value,
       message: form.message.value,
-      tradingExperience: form.tradingExperience.value, // Add tradingExperience field
-      city: form.city.value, // Add city field
-      occupation: form.occupation.value, // Add occupation field
+      tradingExperience: form.tradingExperience.value,
+      city: form.city.value,
+      occupation: form.occupation.value,
     };
 
     try {
@@ -35,47 +35,58 @@ const Contact = () => {
       alert("Error sending message, please try again.");
     }
 
-    // Optionally reset the form fields after submission
     form.reset();
   };
 
   const Wrapper = styled.section`
-    padding: 9rem 0 5rem 0;
+    padding: 9rem 1rem 5rem 1rem;
+    background-color: ${({ theme }) => theme.colors.background};
+
+    @media (min-width: 768px) {
+      padding: 9rem 2rem 5rem 2rem;
+    }
 
     .container {
       margin-top: 6rem;
       text-align: center;
 
       .contact-form {
-        max-width: 50rem;
+        max-width: 600px;
         margin: auto;
         padding: 2rem;
-        background-color: ${({ theme }) => theme.colors.background};
+        background-color: ${({ theme }) => theme.colors.white};
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
       }
 
       .contact-inputs {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        height: auto;
-        align-items: center;
-        justify-content: center;
 
         input,
         textarea {
           padding: 1rem;
-          border: 1px solid ${({ theme }) => theme.colors.yellow};
+          border: 1px solid ${({ theme }) => theme.colors.gray};
           border-radius: 5px;
-          font-size: 2rem;
+          font-size: 1.2rem;
           width: 100%;
-          max-width: 100%;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: ${({ theme }) => theme.colors.yellow};
+            outline: none;
+          }
         }
 
         textarea {
           resize: vertical;
-          min-height: 200px;
+          min-height: 150px;
         }
 
         input[type="submit"] {
@@ -84,16 +95,14 @@ const Contact = () => {
           padding: 1rem;
           background-color: ${({ theme }) => theme.colors.yellow};
           color: #fff;
-          border: 2px solid ${({ theme }) => theme.colors.yellow};
+          border: none;
           font-size: 1.2rem;
-          width: 100px;
-          max-width: 200px;
           text-align: center;
           margin-top: 1rem;
+          border-radius: 5px;
 
           &:hover {
-            background-color: ${({ theme }) => theme.colors.yellow};
-            border: 2px solid ${({ theme }) => theme.colors.yellow};
+            background-color: ${({ theme }) => theme.colors.darkYellow};
             transform: scale(1.05);
           }
         }
@@ -107,7 +116,7 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <h2 className="common-heading">Feel Free to Contact us</h2>
+      <h2 className="common-heading">Feel Free to Contact Us</h2>
 
       <div className="container">
         <div className="contact-form">
@@ -136,6 +145,10 @@ const Contact = () => {
               autoComplete="off"
               required
             ></textarea>
+
+            <input type="text" name="tradingExperience" placeholder="Trading Experience" />
+            <input type="text" name="city" placeholder="City" />
+            <input type="text" name="occupation" placeholder="Occupation" />
 
             <input type="submit" value="Send" />
           </form>

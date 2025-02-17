@@ -109,9 +109,26 @@ const Franchise = () => {
           </p>
         </VideoTextWrapper>
       </VideoSection>
+      <ImageSection>
+  <StyledImage src="/123.png" alt="New Image" />
+</ImageSection>
+
     </Container>
   );
 };
+
+const ImageSection = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+`;
+
+const StyledImage = styled.img`
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 10px;
+`;
 
 /* Styled Components */
 const Container = styled.div`
