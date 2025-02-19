@@ -56,7 +56,7 @@ const Franchise = () => {
             </span>
           </h1>
           <p className={styles.description}>
-            Partner with us to revolutionize financial education in your city and make a lasting impact.
+          Join us in transforming financial education in your city by becoming a valued partner in our mission. Together, we can empower individuals with the knowledge and skills needed to navigate the stock market with confidence.
           </p>
           <button className={styles.applyButton}>Apply Now →</button>
         </div>
@@ -140,7 +140,7 @@ Email Input */}
         <div className={styles.videoTextWrapper}>
           <h2 className={styles.videoTitle}>Why Choose Our Franchise?</h2>
           <p className={styles.videoDescription}>
-            Become a part of India's leading stock market education platform.
+          Join India’s leading stock market education platform and be a part of a growing network dedicated to financial literacy. With our proven business model, expert support, and innovative learning approach, you’ll have everything you need to establish a successful Stock Market Learning Center in your city. Benefit from our extensive curriculum, cutting-edge technology, and strong brand reputation to make a meaningful impact while building a profitable venture.
           </p>
         </div>
 
@@ -148,21 +148,21 @@ Email Input */}
 
       <div className={styles.iconCard}>
         <div className={styles.iconContainer}>
-          <GiFireplace size={35} color="d88d3c" />
+          <GiFireplace className={styles.processIcons} color="d88d3c" />
           <h4 className={`${styles.iconTitle} ${styles.iconAreaTitle}`}>Minimum Area Required</h4>
           <p className={styles.iconText}>1000 sqr ft.</p>
         </div>
 
         <div className={styles.iconContainer}>
-          <ImStatsDots size={35} color="3b873e" />
+          <ImStatsDots className={styles.processIcons} color="3b873e" />
           <h4 className={`${styles.iconTitle} ${styles.iconInvestmentTitle}`}>Investment starts @ INR</h4>
           <p className={styles.iconText}>8 lakhs</p>
         </div>
 
         <div className={styles.iconContainer}>
-          <FaMapLocationDot size={35} color="37439e" />
+          <FaMapLocationDot className={styles.processIcons} color="37439e" />
           <h4 className={`${styles.iconTitle} ${styles.iconLocationTitle}`}>Location</h4>
-          <p className={styles.iconText}>India 1 & India 2</p>
+          <p className={styles.iconText}>Bhagalpur</p>
         </div>
 
       </div>
@@ -170,7 +170,7 @@ Email Input */}
       {/* Centre Franchise Approval Process Section */}
 
       <div className={styles.approvalProcessContainer}>
-        <h1 className={styles.approvalProcessContainerTitle}><span className={styles.approvalProcessContainerSubTitle}>StockDaddy  </span>Centre Franchise Approval Process</h1>
+        <h1 className={styles.approvalProcessContainerTitle}><span className={styles.approvalProcessContainerSubTitle}>Stock Archery  </span>Franchise Centre  Approval Process</h1>
         <div className={styles.cardContainer}>
           {CentreFranchiseData.map((data, index) => (
             <div key={index} className={styles.approvalProcessCard}>
