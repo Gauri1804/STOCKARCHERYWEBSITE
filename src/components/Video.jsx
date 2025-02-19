@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -18,16 +18,14 @@ const Container = styled.div`
 const VideoWrapper = styled.div`
   flex: 1;
   background-color: #333;
-  border: 2px solid #000000;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
-  
 
-  iframe {
+  video {
     width: 100%;
-    height: 325px;
-    border: none;
+    height: auto;
+    border-radius: 10px;
   }
 
   @media (max-width: 768px) {
@@ -38,27 +36,26 @@ const VideoWrapper = styled.div`
 
 const TextContent = styled.div`
   flex: 1;
-  padding: 0; /* Explicitly remove padding */
-  margin: 0; /* Explicitly remove margin */
+  padding: 0;
+  margin: 0;
 
   h2 {
     font-size: 4rem;
     color: #fff;
-    margin: none; /* Remove margin */
-    padding: none; /* Remove padding */
-    
-    
+    margin: 0;
+    padding: 0;
+
     span {
       color: #febb12;
     }
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: justify;
     color: #FDD788;
-   margin: 40px 0 0; 
-    padding: 0; /* Remove padding */
+    margin: 40px 0 0;
+    padding: 0;
   }
 
   @media (max-width: 768px) {
@@ -67,15 +64,21 @@ const TextContent = styled.div`
 `;
 
 const Video = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = 0.001; // Set volume to 25%
+    }
+  }, []);
+
   return (
     <Container>
       <VideoWrapper>
-        <iframe
-          src="https://www.youtube.com/embed/6CdNjMRb9NE"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <video ref={videoRef} autoPlay loop muted={false} controls>
+          <source src="pro.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </VideoWrapper>
       <TextContent>
         <h2>Bihar's <span>First</span> Trading <span>Floor</span></h2>
