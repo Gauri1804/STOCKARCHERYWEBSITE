@@ -19,11 +19,11 @@ import BlogPage from './components/blogpage';
 import Ola from './blog/ola';
 import Zerodha from './blog/ref';
 import Fest from './blog/festival';
-import It from './blog/it';  
+import It from './blog/it';
 import Bj from './blog/bjaj';
 import Bj2 from './blog/bjaj2';
 import Five from './blog/five';
-import Franchise from './components/Franchise';
+import Franchise from './components/Franchise/Franchise';
 
 const theme = {
   colors: {
@@ -75,7 +75,7 @@ const App = () => {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
-        
+
       </BrowserRouter>
     </ThemeProvider>
   );

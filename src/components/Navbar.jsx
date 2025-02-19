@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { CgMenu, CgCloseR } from 'react-icons/cg';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { CgMenu, CgCloseR } from "react-icons/cg";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -9,7 +9,10 @@ const Navbar = () => {
   return (
     <Nav role="navigation" aria-label="Main Navigation">
       {/* Overlay effect when the menu is open */}
-      <div className={`overlay ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(false)}></div>
+      <div
+        className={`overlay ${openMenu ? "active" : ""}`}
+        onClick={() => setOpenMenu(false)}
+      ></div>
 
       <div className="menuIcon">
         <div
@@ -19,96 +22,28 @@ const Navbar = () => {
           onClick={() => setOpenMenu(!openMenu)}
         >
           {openMenu ? (
-            <CgCloseR
-              className="mobile-nav-icon close-icon"
-              aria-hidden="true"
-            />
+            <CgCloseR className="mobile-nav-icon close-icon" aria-hidden="true" />
           ) : (
-            <CgMenu
-              className="mobile-nav-icon"
-              aria-hidden="true"
-            />
+            <CgMenu className="mobile-nav-icon" aria-hidden="true" />
           )}
         </div>
 
-        <ul className={`navbar-list ${openMenu ? 'active' : ''}`} role="menubar">
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/"
-              role="menuitem"
-              aria-label="Home"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/about"
-              role="menuitem"
-              aria-label="About Us"
-            >
-              About
-            </NavLink>
-          </li>
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/testimonial"
-              role="menuitem"
-              aria-label="Testimonials"
-            >
-              Testimonials
-            </NavLink>
-          </li>
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/contact"
-              role="menuitem"
-              aria-label="Contact Us"
-            >
-              Contact
-            </NavLink>
-          </li>
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/blog"
-              role="menuitem"
-              aria-label="Blogs"
-            >
-              Blogs
-            </NavLink>
-          </li>
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/FAQ"
-              role="menuitem"
-              aria-label="FAQ"
-            >
-              FAQ
-            </NavLink>
-          </li>
-          <li role="none">
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/Franchise"
-              role="menuitem"
-              aria-label="FAQ"
-            >
-              Franchise
-            </NavLink>
-          </li>
+        <ul className={`navbar-list ${openMenu ? "active" : ""}`} role="menubar">
+          {["Home", "About", "Testimonials", "Contact", "Blog", "FAQ", "Franchise"].map(
+            (item, index) => (
+              <li key={index} role="none">
+                <NavLink
+                  className="navbar-link"
+                  onClick={() => setOpenMenu(false)}
+                  to={`/${item.toLowerCase()}`}
+                  role="menuitem"
+                  aria-label={item}
+                >
+                  {item}
+                </NavLink>
+              </li>
+            )
+          )}
         </ul>
       </div>
     </Nav>
@@ -116,20 +51,17 @@ const Navbar = () => {
 };
 
 const Nav = styled.nav`
-  /* Main container for the menu */
   .menuIcon {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: rgba(37,37,37,255);
-    box-sizing: border-box;
+    background: #252525;
     width: 100%;
     position: relative;
     z-index: 1001;
   }
 
-  /* Basic styling for desktop view */
   .navbar-list {
     display: flex;
     gap: 1.5rem;
@@ -139,7 +71,6 @@ const Nav = styled.nav`
       .navbar-link {
         &:link,
         &:visited {
-          display: inline-block;
           text-decoration: none;
           font-size: 1.8rem;
           font-weight: bold;
@@ -160,7 +91,7 @@ const Nav = styled.nav`
     display: none;
 
     .mobile-nav-icon {
-      font-size: 4rem;
+      font-size: 3.5rem;
       cursor: pointer;
       color: #febb12;
       transition: color 0.3s ease;
@@ -193,18 +124,18 @@ const Nav = styled.nav`
     visibility: visible;
   }
 
-  /* Responsive styling for mobile view */
+  /* Mobile view */
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .mobile-navbar-btn {
       display: block;
     }
 
-    /* Full-screen mobile view menu */
+    /* Slide-in menu effect */
     .navbar-list {
       position: fixed;
       top: 0;
-      right: 0;
-      width: 100%;
+      right: -100%;
+      width: 75%;
       height: 100%;
       background-color: rgba(37, 37, 37, 0.95);
       display: flex;
@@ -212,20 +143,14 @@ const Nav = styled.nav`
       align-items: center;
       justify-content: center;
       gap: 2rem;
-      padding: 0;
-      margin: 0;
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+      padding: 2rem;
+      transform: translateX(0);
+      transition: right 0.4s ease-in-out;
       z-index: 10000;
     }
 
-    /* Show menu when active */
     .navbar-list.active {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
+      right: 0;
     }
 
     /* Styling for navbar links in mobile view */
@@ -233,9 +158,18 @@ const Nav = styled.nav`
       font-size: 2.5rem;
       color: #ffcc00;
       text-transform: uppercase;
+      padding: 1rem 2rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transition: background 0.3s ease;
     }
 
-    /* Ensure the menu icon appears */
+    .navbar-link:hover {
+      background: rgba(255, 204, 0, 0.2);
+    }
+
+    /* Menu icon */
     .mobile-navbar-btn .mobile-nav-icon {
       display: block;
     }

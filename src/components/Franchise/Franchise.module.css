@@ -1,0 +1,323 @@
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    width: 100%;
+
+    padding: 5rem;
+    background: rgba(37, 37, 37, 255);
+
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        margin: 10px auto;
+    }
+}
+
+/* Content Wrapper */
+.contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contentWrapper {
+        flex-direction: column;
+    }
+}
+
+/* Left Section */
+.leftSection {
+    flex: 1;
+    padding: 40px;
+}
+
+.leftSection .title {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.leftSection .highlight {
+    color: white;
+}
+
+.leftSection .highlight2 {
+    color: #febb12;
+}
+
+.description {
+    max-width: 500px;
+}
+
+@media (max-width: 480px) {
+    .leftSection {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .leftSection .title {
+        font-size: 30px;
+    }
+}
+
+/* Right Section */
+.rightSection {
+    flex: 1.5;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .rightSection {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+    padding: 15px;
+}
+
+@media (max-width: 480px) {
+    .form {
+        padding: 10px;
+    }
+}
+
+/* Row */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 480px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Input Group */
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputGroup input,
+.inputGroup select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.submitButton {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background: #0056b3;
+}
+
+/* Video Section */
+.videoSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+@media (max-width: 480px) {
+    .videoSection {
+        flex-direction: column;
+    }
+}
+
+
+/* Video Wrapper */
+.videoWrapper {
+    flex: 1;
+}
+
+/* Video */
+.video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .video {
+        max-width: 100%;
+    }
+}
+
+/* Apply Button */
+.applyButton {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #febb12;
+    border: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Video Text Wrapper */
+.videoTextWrapper {
+    flex: 1;
+    text-align: center;
+}
+
+.videoTextWrapper .videoTitle {
+    font-size: 28px;
+    color: #febb12;
+}
+
+@media (max-width: 480px) {
+    .videoTextWrapper .videoTitle {
+        font-size: 22px;
+    }
+}
+
+
+.required {
+    color: red;
+}
+
+/* icon Card */
+
+.iconCard {
+    background: #f9f9f9;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconTitle {
+
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.iconAreaTitle {
+    color: #d88d3c;
+}
+
+.iconInvestmentTitle {
+    color: #3b873e;
+}
+
+.iconLocationTitle {
+    color: #37439e;
+}
+
+.iconText {
+    color: #a6a6a6;
+    margin: 0;
+}
+
+
+/* Centre Franchise Approval Process Section */
+
+.approvalProcessContainer {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.approvalProcessContainerTitle {
+    color: #febb12;
+    font-size: 3rem;
+}
+
+.approvalProcessContainerSubTitle {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.approvalProcessCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5rem;
+    max-width: 300px;
+    width: 30%;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+}
+
+.approvalProcessIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.approvalProcessTitle {
+    color: #febb12;
+    font-weight: bold;
+}
+
+.approvalProcessText {
+    color: #000;
+}
