@@ -68,14 +68,22 @@ const Video = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.volume = 0.001; // Set volume to 25%
+      videoRef.current.muted = true; // Initially muted to allow autoplay
+      videoRef.current.play().then(() => {
+        setTimeout(() => {
+          videoRef.current.muted = false; // Unmute after autoplay starts
+          videoRef.current.volume = 0.0002; // Set volume to 25%
+        }, 1000);
+      }).catch((error) => {
+        console.error("Autoplay failed:", error);
+      });
     }
   }, []);
 
   return (
     <Container>
       <VideoWrapper>
-        <video ref={videoRef} autoPlay loop muted={false} controls>
+        <video ref={videoRef} autoPlay loop>
           <source src="pro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
