@@ -1,36 +1,100 @@
-import { FcApproval } from "react-icons/fc";
+import { IoIosCloudDone } from "react-icons/io";
 import { FaHandshakeSimple } from "react-icons/fa6";
 import { LuNotebookText } from "react-icons/lu";
 import { GrGroup } from "react-icons/gr";
 import { FaPersonChalkboard } from "react-icons/fa6";
 import styles from "../Franchise/Franchise.module.css";
+import { FaPersonBurst } from "react-icons/fa6";
+import { FaBalanceScale } from "react-icons/fa";
+import { AiTwotoneSafetyCertificate } from "react-icons/ai";
+import { FcOnlineSupport } from "react-icons/fc";
+import { HiUserGroup } from "react-icons/hi";
+import { GrUserExpert } from "react-icons/gr";
+import { FaUserGraduate } from "react-icons/fa";
+import { GiIndianPalace } from "react-icons/gi";
+import { BsFillBarChartLineFill } from "react-icons/bs";
+import { FcRating } from "react-icons/fc";
+import { MdGroupAdd } from "react-icons/md";
+import { IoTicketOutline } from "react-icons/io5";
 export const CentreFranchiseData = [
 
 
 
     {
-        icon: <FcApproval className={styles.icons} color="#007aff" />,
+        icon: <IoIosCloudDone className={styles.icons} color="green" />,
         title: "Apply Online",
-        text: "Complete our simple 'Apply Now' form to submit your application. Share your basic details and express your interest in collaborating with us to bring stock market education to your city.",
+        text: "Submit your application through our easy-to-use 'Apply Now' form. Provide your basic details and express your interest in partnering with us to bring stock market education to your city.",
     },
     {
-        icon: <FaHandshakeSimple className={styles.icons} color="#007aff" />,
+        icon: <FaHandshakeSimple className={styles.icons} color="green" />,
         title: "Introductory Call",
-        text: "Reach out to our franchise development team to share your background, explore your region's potential, and gain insights into our business model.",
+        text: "Connect with our franchise development team to share your background, discuss your region's potential, and learn more about our business model.",
     },
     {
-        icon: <LuNotebookText className={styles.icons} color="#007aff" />,
+        icon: <LuNotebookText className={styles.icons} color="green" />,
         title: "Business Plan Review & Evaluation",
-        text: "Explore the financial aspects, operational requirements, and market potential with us. We'll help you develop a sustainable plan for success.",
+        text: "Dive into the financial aspects, operational requirements, and market potential. We'll guide you through creating a sustainable plan for success.",
     },
     {
-        icon: <GrGroup className={styles.icons} color="#007aff" />,
+        icon: <GrGroup className={styles.icons} color="green" />,
         title: "Orientation Day",
-        text: "Connect with our leadership, discover our hybrid learning model, and see firsthand how our innovative courses are transforming lives. This step will help you align with our mission.",
+        text: "Meet our leadership, explore our hybrid learning model, and experience how our innovative courses are changing lives. This step will help you align with our mission.",
     },
     {
-        icon: <FaPersonChalkboard className={styles.icons} color="#007aff" />,
+        icon: <FaPersonChalkboard className={styles.icons} color="green" />,
         title: "Final Approval & Partnership Launch",
-        text: "Finalize the documentation, ensure compliance, and gain access to all the resources needed to launch your Stock Market Learning Center in your region.",
+        text: "Complete the documentation, finalize compliance, and receive all the resources needed to launch your Stock Market Learning Center in your territory.",
     },
 ];
+
+
+export const CentreFranchiseData2 = [
+    {
+        icon: <FaPersonBurst color="green" className={styles.chooseIcon} />,
+        title: "Proven Success",
+    },
+    {
+        icon: <FaBalanceScale color="brown" className={styles.chooseIcon} />,
+        title: "Ownership Equity",
+    },
+    {
+        icon: <AiTwotoneSafetyCertificate className={styles.chooseIcon} />,
+        title: "Operational Efficiency",
+    },
+    {
+        icon: <FcOnlineSupport className={styles.chooseIcon} />,
+        title: "Support from central operations",
+    },
+    {
+        icon: <HiUserGroup color="#00a2ff" className={styles.chooseIcon} />,
+        title: "50,000+ user base",
+    },
+    {
+        icon: <GrUserExpert color="#7acfff" className={styles.chooseIcon} />,
+        title: "Led by Industry Experts",
+    },
+    {
+        icon: <FaUserGraduate color="#6c3de3" className={styles.chooseIcon} />,
+        title: "2K Enrolled Learners",
+    },
+    {
+        icon: <GiIndianPalace color="green" className={styles.chooseIcon} />,
+        title: "PAN India Brand Presence",
+    },
+    {
+        icon: <BsFillBarChartLineFill color="#07e30e" className={styles.chooseIcon} />,
+        title: "1Cr+ Annualised Revenue",
+    },
+    {
+        icon: <FcRating className={styles.chooseIcon} />,
+        title: "Rated 4.9 & Above",
+    },
+    {
+        icon: <MdGroupAdd color="#e3be07" className={styles.chooseIcon} />,
+        title: "25+ New Monthly Hybrid Enrollments",
+    },
+    {
+        icon: <IoTicketOutline color="#670578" className={styles.chooseIcon} />,
+        title: "INR 35000 Average Ticket Size",
+    },
+]

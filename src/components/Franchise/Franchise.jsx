@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./Franchise.module.css"; // Import CSS module
 import { db } from "../firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
 import { GiFireplace } from "react-icons/gi";
 import { ImStatsDots } from "react-icons/im";
 import { FaMapLocationDot } from "react-icons/fa6";
-import { CentreFranchiseData } from "../CentreFranchise/CentreFranchiseData";
+import { CentreFranchiseData, CentreFranchiseData2 } from "../CentreFranchise/CentreFranchiseData";
 const Franchise = () => {
-
+  const inputRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +17,14 @@ const Franchise = () => {
     budget: "",
     startTime: "",
   });
+
+  const handleButtonClick = () => {
+    setTimeout(() => {
+      if (inputRef.current) {
+        inputRef.current.focus(); // Move cursor to the input field
+      }
+    }, 0);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -56,9 +64,9 @@ const Franchise = () => {
             </span>
           </h1>
           <p className={styles.description}>
-          Join us in transforming financial education in your city by becoming a valued partner in our mission. Together, we can empower individuals with the knowledge and skills needed to navigate the stock market with confidence.
+            Partner with us to revolutionize financial education in your city and make a lasting impact.
           </p>
-          <button className={styles.applyButton}>Apply Now →</button>
+          <button onClick={handleButtonClick} className={styles.applyButton}>Apply Now →</button>
         </div>
 
         {/* Name input */}
@@ -67,7 +75,7 @@ const Franchise = () => {
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
               <label htmlFor="name">Full Name <span className={styles.required}>*</span> </label>
-              <input name="name" type="text" placeholder="Enter your name" required value={formData.name} onChange={handleChange} />
+              <input ref={inputRef} name="name" type="text" placeholder="Enter your name" required value={formData.name} onChange={handleChange} />
             </div>
 
             <div className={styles.row}>
@@ -140,7 +148,7 @@ Email Input */}
         <div className={styles.videoTextWrapper}>
           <h2 className={styles.videoTitle}>Why Choose Our Franchise?</h2>
           <p className={styles.videoDescription}>
-          Join India’s leading stock market education platform and be a part of a growing network dedicated to financial literacy. With our proven business model, expert support, and innovative learning approach, you’ll have everything you need to establish a successful Stock Market Learning Center in your city. Benefit from our extensive curriculum, cutting-edge technology, and strong brand reputation to make a meaningful impact while building a profitable venture.
+            Become a part of India's leading stock market education platform.
           </p>
         </div>
 
@@ -162,7 +170,7 @@ Email Input */}
         <div className={styles.iconContainer}>
           <FaMapLocationDot className={styles.processIcons} color="37439e" />
           <h4 className={`${styles.iconTitle} ${styles.iconLocationTitle}`}>Location</h4>
-          <p className={styles.iconText}>Bhagalpur</p>
+          <p className={styles.iconText}>India 1 & India 2</p>
         </div>
 
       </div>
@@ -170,7 +178,7 @@ Email Input */}
       {/* Centre Franchise Approval Process Section */}
 
       <div className={styles.approvalProcessContainer}>
-        <h1 className={styles.approvalProcessContainerTitle}><span className={styles.approvalProcessContainerSubTitle}>Stock Archery  </span>Franchise Centre  Approval Process</h1>
+        <h1 className={styles.approvalProcessContainerTitle}><span className={styles.approvalProcessContainerSubTitle}>StockArchery  </span>Centre Franchise Approval Process</h1>
         <div className={styles.cardContainer}>
           {CentreFranchiseData.map((data, index) => (
             <div key={index} className={styles.approvalProcessCard}>
@@ -181,6 +189,25 @@ Email Input */}
           ))}
         </div>
       </div>
+
+
+
+      {/* Why Choose StockArchery Section */}
+
+      <div className={styles.chooseStockArcheryContainer}>
+        <h1 className={styles.chooseStockArcheryTitle}>Why Choose <span className={styles.chooseStockArcheryTitleHighlight}>StockArchery</span> ?</h1>
+        <div className={styles.chooseStockArcheryCardContainer}>
+          {CentreFranchiseData2.map((data, index) => (
+            <div key={index} className={styles.chooseStockArcheryCard}>
+              <div className={styles.chooseStockArcheryIcon}>{data.icon}</div>
+              <p className={styles.chooseStockArcheryText}>{data.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+
 
 
     </div>
