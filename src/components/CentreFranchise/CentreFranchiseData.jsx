@@ -16,6 +16,12 @@ import { BsFillBarChartLineFill } from "react-icons/bs";
 import { FcRating } from "react-icons/fc";
 import { MdGroupAdd } from "react-icons/md";
 import { IoTicketOutline } from "react-icons/io5";
+
+//OUR CONCEPT
+import { MdLibraryAdd } from "react-icons/md";
+import { GiPizzaCutter } from "react-icons/gi";
+import { TbBinaryTree } from "react-icons/tb";
+
 export const CentreFranchiseData = [
 
 
@@ -47,6 +53,8 @@ export const CentreFranchiseData = [
     },
 ];
 
+
+//Why Choose StockArchery Section
 
 export const CentreFranchiseData2 = [
     {
@@ -97,4 +105,30 @@ export const CentreFranchiseData2 = [
         icon: <IoTicketOutline color="#670578" className={styles.chooseIcon} />,
         title: "INR 35000 Average Ticket Size",
     },
+]
+
+
+// OUR CONCEPT 
+
+export const CentreFranchiseData3 = [
+    {
+        icon: <MdLibraryAdd color="green" className={styles.chooseIcon} />,
+        title: "Vibrant & Positive",
+        text: "Discover a vibrant and positive atmosphere at our Stock Market Hybrid Learning Center, where innovation and education flourish.",
+    },
+    {
+        icon: <GiPizzaCutter color="brown" className={styles.chooseIcon} />,
+        title: "Cutting-edge Technology",
+        text: "We seamlessly integrate innovative tools to enhance the learning experience, ensuring our students stay ahead in the dynamic world of stock market education.",
+    },
+    {
+        icon: <HiUserGroup color="#00a2ff" className={styles.chooseIcon} />,
+        title: "Community Based Learning",
+        text: "Experience hands-on, community-based learning at our Hybrid Learning Center, where practical skills meet a supportive environment for real-world success.",
+    },
+    {
+        icon: <TbBinaryTree color="gray" className={styles.chooseIcon} />,
+        title: "Social Engagement",
+        text: "Fueling success through social engagement, our Hybrid Learning Center creates a dynamic space where students connect, collaborate, and thrive.",
+    }
 ]

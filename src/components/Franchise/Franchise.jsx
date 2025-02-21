@@ -5,7 +5,7 @@ import { collection, doc, setDoc } from "firebase/firestore";
 import { GiFireplace } from "react-icons/gi";
 import { ImStatsDots } from "react-icons/im";
 import { FaMapLocationDot } from "react-icons/fa6";
-import { CentreFranchiseData, CentreFranchiseData2 } from "../CentreFranchise/CentreFranchiseData";
+import { CentreFranchiseData, CentreFranchiseData2, CentreFranchiseData3 } from "../CentreFranchise/CentreFranchiseData";
 const Franchise = () => {
   const inputRef = useRef(null);
   const [formData, setFormData] = useState({
@@ -177,7 +177,7 @@ Email Input */}
 
       {/* Centre Franchise Approval Process Section */}
 
-      <div className={styles.approvalProcessContainer}>
+      <section className={styles.approvalProcessContainer}>
         <h1 className={styles.approvalProcessContainerTitle}><span className={styles.approvalProcessContainerSubTitle}>StockArchery  </span>Centre Franchise Approval Process</h1>
         <div className={styles.cardContainer}>
           {CentreFranchiseData.map((data, index) => (
@@ -188,13 +188,13 @@ Email Input */}
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
 
 
       {/* Why Choose StockArchery Section */}
 
-      <div className={styles.chooseStockArcheryContainer}>
+      <section className={styles.chooseStockArcheryContainer}>
         <h1 className={styles.chooseStockArcheryTitle}>Why Choose <span className={styles.chooseStockArcheryTitleHighlight}>StockArchery</span> ?</h1>
         <div className={styles.chooseStockArcheryCardContainer}>
           {CentreFranchiseData2.map((data, index) => (
@@ -204,9 +204,25 @@ Email Input */}
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
 
+      {/* OUR CONCEPT Section */}
+
+      <section className={styles.ourConceptContainer}>
+        <h1 className={styles.ourConceptContainerTitle}>OUR CONCEPT - <span className={styles.ourConceptContainerSubTitle}>HYBRID LEARNING</span></h1>
+        <div className={styles.ourConceptCardContainer}>
+          {CentreFranchiseData3.map((data, index) => (
+            <div key={index} className={styles.ourConceptCard}>
+              <div className={styles.ourConceptCardIcon}>
+                {data.icon}
+              </div>
+              <h3 className={styles.ourConceptCardTitle}>{data.title}</h3>
+              <p className={styles.ourConceptCardText}>{data.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
 
 

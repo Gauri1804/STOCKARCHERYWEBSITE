@@ -305,7 +305,7 @@
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
 }
 
 .approvalProcessContainerTitle {
@@ -386,6 +386,7 @@
     justify-content: center;
     align-items: center;
     gap: min(10px, 20px);
+    margin-bottom: 8rem;
 }
 
 .chooseStockArcheryTitle {
@@ -405,7 +406,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 
 .chooseStockArcheryCard {
@@ -447,5 +448,63 @@
     .chooseStockArcheryCard {
         width: 100%;
         margin-top: 2rem;
+    }
+}
+
+
+/* OUR CONCEPT Section */
+
+.ourConceptContainer {
+    margin-bottom: 8rem;
+}
+
+.ourConceptContainerTitle {
+    text-align: center;
+    font-size: min(3vw, 3.5rem);
+    color: #fff;
+}
+
+.ourConceptContainerSubTitle {
+    color: #febb12;
+    text-decoration: underline;
+    font-size: min(3vw, 4rem);
+}
+
+.ourConceptCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 50px
+}
+
+.ourConceptCard {
+    width: 300px;
+    height: 280px;
+    background-color: #f7f7f7;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ourConceptCardTitle {
+    color: #febb12;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.ourConceptCardText {
+    color: #000;
+    font-size: small;
+}
+
+.ourConceptCardIcon {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:800px) {
+    .ourConceptCardContainer {
+        flex-direction: column;
     }
 }
